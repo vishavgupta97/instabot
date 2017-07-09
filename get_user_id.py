@@ -1,7 +1,7 @@
 from constants import BASE_URL,APP_ACCESS_TOKEN
 import requests
 def get_user_id(insta_username) :
-    request_url=BASE_URL+"users/search?q=%s&access_token="%(insta_username,APP_ACCESS_TOKEN)
+    request_url=BASE_URL+"users/search?q=%s&access_token=%s"%(insta_username,APP_ACCESS_TOKEN)
     print "GET REQUEST URL :%s"%(request_url)
     user_info=requests.get(request_url).json()
     if user_info['meta']['code']==200 :

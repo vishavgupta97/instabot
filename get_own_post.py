@@ -4,7 +4,7 @@ import urllib
 def get_own_post() :
     requests_url=(BASE_URL)+"users/self/media/recent/?access_token=%s"%(APP_ACCESS_TOKEN)
     print "Get Request URL:%s"%(requests_url)
-    own_media=requets.get(requests_url).json()
+    own_media=requests.get(requests_url).json()
     if own_media['meta']['code']==200 :
         if len(own_media['data']) :
             image_name = own_media['data'][0]['id'] + '.jpeg'
@@ -18,3 +18,4 @@ def get_own_post() :
         print "STATUS CODE OTHER THAN 200 IS FOUND!"
     #return None
 
+#get_own_post()
