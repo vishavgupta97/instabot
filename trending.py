@@ -1,4 +1,3 @@
-import json
 import requests
 from constants import APP_ACCESS_TOKEN ,BASE_URL
 from get_user_post import get_users_post

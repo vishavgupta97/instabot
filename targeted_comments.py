@@ -19,20 +19,5 @@ def targeted_commenting_for_marketing(insta_username) :
         for serve in service :
             if serve in post['caption']['text'] :
                 post_a_comment(insta_username)
-            else :
 
-
-    #if user_media['meta']['code']==200 :
-        #if len(user_media['data']) :
-            #image_name = user_media['data'][0]['id'] + '.jpeg'
-            #image_url = user_media['data'][0]['images']['standard_resolution']['url']
-            #urllib.urlretrieve(image_url, image_name)
-            #print "Your image has been downloaded!"
-            #return user_media['data'][0][id]
-        #else :
-            #print "THERE IS NOT ANY RECENT POSTS"
-    #else :
-        #print "Status Code Other Than 200 Is Recieved"
-    #return None
-
-
+targeted_commenting_for_marketing("vishavgupta97")
