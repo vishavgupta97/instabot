@@ -3,7 +3,6 @@ from get_user_id import get_user_id
 import urllib
 import requests
 from post_a_comment import post_a_comment
-insta_username="vishavgupta97"
 def targeted_commenting_for_marketing(insta_username) :
     user_id=get_user_id(insta_username)
     if user_id==None :
@@ -36,4 +35,4 @@ def targeted_commenting_for_marketing(insta_username) :
         #print "Status Code Other Than 200 Is Recieved"
     #return None
 
-targeted_commenting_for_marketing(insta_username)
+

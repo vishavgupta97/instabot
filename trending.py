@@ -24,4 +24,4 @@ def get_trending_tag_counts(tag):
         print (Style.RESET_ALL)
     else:
         print(Fore.RED+Style.BRIGHT+'not successful')
-get_trending_tag_counts("modi")
+#get_trending_tag_counts("modi")

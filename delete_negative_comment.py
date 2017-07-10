@@ -3,7 +3,8 @@ from textblob import TextBlob
 from textblob.sentiments import NaiveBayesAnalyzer
 from constants import BASE_URL,APP_ACCESS_TOKEN
 from get_post_id import get_post_id
-insta_username="royal_khann"
+from colorama import *
+#insta_username="royal_khann"
 def delete_negative_comment(insta_username):
     media_id = get_post_id(insta_username)
     request_url = (BASE_URL + 'media/%s/comments/?access_token=%s') % (media_id, APP_ACCESS_TOKEN)
@@ -18,7 +19,7 @@ def delete_negative_comment(insta_username):
                 comment_text = comment_info['data'][x]['text']
                 blob = TextBlob(comment_text, analyzer=NaiveBayesAnalyzer())
                 if (blob.sentiment.p_neg > blob.sentiment.p_pos):
-                    print 'Negative comment : %s' % (comment_text)
+                    print Fore.RED+Style.BRIGHT+'Negative comment : %s' % (comment_text)
                     delete_url = (BASE_URL + 'media/%s/comments/%s/?access_token=%s') % (media_id, comment_id, APP_ACCESS_TOKEN)
                     print 'DELETE request url : %s' % (delete_url)
                     delete_info = requests.delete(delete_url).json()
@@ -28,9 +29,9 @@ def delete_negative_comment(insta_username):
                     else:
                         print 'Unable to delete comment!'
                 else:
-                    print 'Positive comment : %s\n' % (comment_text)
+                    print Fore.BLUE+Style.BRIGHT+'Positive comment : %s\n' % (comment_text)
         else:
             print 'There are no existing comments on the post!'
     else:
         print 'Status code other than 200 received!'
-delete_negative_comment(insta_username)
+#delete_negative_comment(insta_username)
