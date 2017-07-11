@@ -8,7 +8,11 @@ from get_comment_list import get_comment_list
 from get_like_list import get_like_list
 from self_info import self_info
 from colorama import init
-from colorama import Fore,Back,Style
+from colorama import *
+# Python supports regular expressions through the standard python library re
+import re
+#  sys module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter.
+import sys
 from trending import get_trending_tag_counts
 init()
 
