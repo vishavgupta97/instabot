@@ -1,8 +1,10 @@
 import requests
 from get_user_id import get_user_id
 from constants import BASE_URL,APP_ACCESS_TOKEN
+#method for getting post id of a particular post
 def get_post_id(insta_username):
     user_id = get_user_id(insta_username)
+    #If User Doesn't exists than server return none
     if user_id == None:
         print 'User does not exist!'
         exit()

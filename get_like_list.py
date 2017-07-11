@@ -2,10 +2,10 @@ import requests
 from constants import BASE_URL,APP_ACCESS_TOKEN
 from get_post_id import get_post_id
 from colorama import *
-#insta_username="radhika12344"
+#this method is used to get all the list of users who have like a particular post
+#insta_username="radhika12344" we can use this user name for getting best result
 def get_like_list(insta_username) :
-    media_id=get_post_id(insta_username)
-    #https: // api.instagram.com / v1 / media / {media - id} / likes?access_token = ACCESS - TOKEN
+    media_id=get_post_id(insta_username)   #getting media id
     request_url=BASE_URL+"media/%s/likes?access_token=%s"%(media_id,APP_ACCESS_TOKEN)
     print "Get request URL:%s"%(request_url)
     user_media=requests.get(request_url).json()
