@@ -16,32 +16,55 @@ import re
 #  sys module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter.
 import sys
 from trending import get_trending_tag_counts
+import win32com.client as wincl
+
+speak = wincl.Dispatch("SAPI.SpVoice")
+
 init()
 
 show_menu = True
 #----------------------------------Main Function Statrts From Here-------------------------------------------------
 while show_menu:
     print(Fore.GREEN+Style.BRIGHT+"---------------WELCOME TO SMARTER INSTABOT APPLICATION--------------------")
+    speak.Speak("WELCOME TO SMARTER INSTABOT APPLICATION")
     print(Fore.BLUE+Style.BRIGHT+"\n..............WE ARE HAPPY TO GIVE YOU OUR SERVICES............\n")
+    speak.Speak("WE ARE HAPPY TO GIVE YOU OUR SERVICES")
     print(Fore.LIGHTMAGENTA_EX+Style.BRIGHT+".......MAKE YOUR LIFE EASY HERE........")
+    speak.Speak("MAKE YOUR LIFE EASY HERE.")
     #FOLLOWING ARE VARIOUS OPERATIONS THAT WE CAN ABLE TO PERFORM USING THIS APPLICATION
     print "Before Starting This Application Get Certain Help From Us "
+    speak.Speak("Before Starting This Application Get Certain Help From Us")
     print "For Testing Purpose royal_khann,vishavgupta97,radhika12344 Are Some Valid insta_username"
+    speak.Speak("For Testing Purpose royal_khann,vishavgupta97,radhika12344 Are Some Valid insta_username")
     print "These Are The Users who accept Sandbox invitation and You Can Use These For Testing Purpose"
+    speak.Speak("These Are The Users who accept Sandbox invitation and You Can Use These For Testing Purpose")
     print "\n"
     print Fore.BLUE+Style.BRIGHT+"Here are your menu options:"
+    speak.Speak("Here are your menu options:")
     print "1.Get your own details\n"
+    speak.Speak("Get your own details")
     print "2.Get details of a user by username\n"
+    speak.Speak("Get details of a user by username")
     print "3.Get your own recent post\n"
+    speak.Speak("Get your own recent post")
     print "4.Get the recent post of a user by username\n"
+    speak.Speak("Get the recent post of a user by username")
     print "5.Get a list of people who have liked the recent post of a user\n"
+    speak.Speak("Get a list of people who have liked the recent post of a user")
     print "6.Like the recent post of a user\n"
+    speak.Speak("Like the recent post of a user")
     print "7.Get a list of comments on the recent post of a user\n"
+    speak.Speak("Get a list of comments on the recent post of a user")
     print "8.Make a comment on the recent post of a user\n"
+    speak.Speak("Make a comment on the recent post of a user")
     print "9.Get Trending Tags and counts\n"
+    speak.Speak("Get Trending Tags and counts")
     print "10.Delete negative comments from the recent post of a user\n"
+    speak.Speak("Delete negative comments from the recent post of a user")
     print "11.For Post Targeted Comments Based On Caption\n"
+    speak.Speak("For Post Targeted Comments Based On Caption")
     print "12.Exit"
+    speak.Speak("Exit")
     Style.RESET_ALL
     #Getting Choice From The User Here
     menu_choice = raw_input("Now Kindly Enter Your Choice\n")
