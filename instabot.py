@@ -16,7 +16,7 @@ import re
 #  sys module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter.
 import sys
 from trending import get_trending_tag_counts
-import win32com.client as wincl
+import win32com.client as wincl #this library is used for added speaking capability to my Instabot
 
 speak = wincl.Dispatch("SAPI.SpVoice")
 
@@ -25,6 +25,7 @@ init()
 show_menu = True
 #----------------------------------Main Function Statrts From Here-------------------------------------------------
 while show_menu:
+    #Below speak.Speak is used for speaking complete sentence
     print(Fore.GREEN+Style.BRIGHT+"---------------WELCOME TO SMARTER INSTABOT APPLICATION--------------------")
     speak.Speak("WELCOME TO SMARTER INSTABOT APPLICATION")
     print(Fore.BLUE+Style.BRIGHT+"\n..............WE ARE HAPPY TO GIVE YOU OUR SERVICES............\n")
