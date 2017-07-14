@@ -1,5 +1,5 @@
 #----------------------------------------THIS IS MAIN FILE-------------------------------------------------------
-#------------IMPORTING VARIOUS FILES-----------------------
+#importing various files
 from like_a_post import like_a_post
 from post_a_comment import post_a_comment
 from get_user_post import get_users_post
